@@ -19,9 +19,9 @@ pub mod solana_forms_demo {
     pub fn create(
         ctx: Context<Create>,
         fr_5pqi: u128,
-        fr_duif: Vec<String>,
-        fr_6i34: Vec<String>,
-        fr_8xjs: String,
+        // fr_duif: Vec<String>,
+        // fr_6i34: Vec<String>,
+        // fr_8xjs: String,
     ) -> Result<()> {
 
         Ok(())

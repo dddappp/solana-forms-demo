@@ -31,26 +31,41 @@ describe("solana-forms-demo", () => {
     );
     // Define the parameters for the create function.
     const fr5pqi = new anchor.BN(1_234);
-    const frduif = ["hello", "world"];
-    const fr6i34 = ["foo", "bar"];
+//     const frduif = ["hello", "world"];
+//     const fr6i34 = ["foo", "bar"];
     const fr8xjs = "baz";
 
     // Create the main form account
-    const tx = await program.rpc.create(
-        fr5pqi,
-        frduif,
-        fr6i34,
-        fr8xjs,
-        {
-            accounts: {
+    const tx = await program.methods.create(
+            fr5pqi,
+//             frduif,
+//             fr6i34,
+//            fr8xjs
+        ).accounts(
+            {
                 mainForm: mainFormAddress,
                 authority: human.publicKey,
                 rent: anchor.web3.SYSVAR_RENT_PUBKEY,
                 systemProgram: anchor.web3.SystemProgram.programId,
-            },
-            signers: [human],
-        }
-    );
+            }
+        ).signers(
+            [human]
+        ).rpc();
+//     const tx = await program.rpc.create(
+//         fr5pqi,
+//         frduif,
+//         fr6i34,
+//         fr8xjs,
+//         {
+//             accounts: {
+//                 mainForm: mainFormAddress,
+//                 authority: human.publicKey,
+//                 rent: anchor.web3.SYSVAR_RENT_PUBKEY,
+//                 systemProgram: anchor.web3.SystemProgram.programId,
+//             },
+//             signers: [human],
+//         }
+//     );
     console.log("Your transaction signature", tx);
 
     // Fetch the main form account and check its state
