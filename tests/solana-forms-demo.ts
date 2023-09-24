@@ -33,7 +33,7 @@ describe("solana-forms-demo", () => {
     const fr5pqi = new anchor.BN(1_234);
 //     const frduif = ["hello", "world"];
 //     const fr6i34 = ["foo", "bar"];
-    const fr8xjs = "baz";
+//     const fr8xjs = "baz";
 
     // Create the main form account
     const tx = await program.methods.create(
@@ -67,6 +67,7 @@ describe("solana-forms-demo", () => {
 //         }
 //     );
     console.log("Your transaction signature", tx);
+    console.log("mainFormAddress", mainFormAddress);
 
     // Fetch the main form account and check its state
     const mainForm = await program.account.mainForm.fetch(mainFormAddress);

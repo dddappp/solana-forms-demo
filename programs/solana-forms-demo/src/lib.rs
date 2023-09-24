@@ -23,7 +23,7 @@ pub mod solana_forms_demo {
         // fr_6i34: Vec<String>,
         // fr_8xjs: String,
     ) -> Result<()> {
-
+        ctx.accounts.main_form.fr_5pqi = fr_5pqi;
         Ok(())
     }
 }

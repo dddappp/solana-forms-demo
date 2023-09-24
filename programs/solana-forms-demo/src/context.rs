@@ -13,7 +13,7 @@ pub struct Create<'info> {
     ],
     bump,
     payer = authority,
-    space = 8 + size_of::<MainForm>()
+    space = 8 + 2000
     )]
     pub main_form: Account<'info, MainForm>,
 
