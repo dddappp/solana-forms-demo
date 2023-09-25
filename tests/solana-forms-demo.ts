@@ -35,9 +35,21 @@ describe("hello", () => {
     // Add your test here.
     const tx = await program.methods.create(
         new anchor.BN(1_234),
-        ["hello", "world"],
-        ["foo", "bar"],
+        ["A", "B"],
+        ["B", "B"],
         "hello",
+        "1",
+        new anchor.BN(2),
+        "",
+        new anchor.BN(3),
+        ["2023-10-10", "2023-10-11"],
+        ["2023-10-10", "2023-10-11"],
+        new anchor.BN(8),
+        ["10:10:00", "10:11:00"],
+        ["A"],
+        ["1", "3"],
+        "2023-10-10",
+        "y@test.org"
     ).accounts(
         {
            mainForm,
