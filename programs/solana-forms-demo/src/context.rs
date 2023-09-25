@@ -8,7 +8,7 @@ pub struct Create<'info> {
     #[account(
     init,
     seeds = [
-        b"MainForm".as_ref(),
+        b"MainForm",
         authority.key().as_ref(),
     ],
     bump,
@@ -21,8 +21,8 @@ pub struct Create<'info> {
     #[account(mut)]
     pub authority: Signer<'info>,
 
-    /// System Program
-    pub rent: Sysvar<'info, Rent>,
+    // /// System Program
+    // pub rent: Sysvar<'info, Rent>,
 
     /// System Program
     pub system_program: Program<'info, System>,
