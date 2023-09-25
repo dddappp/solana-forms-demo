@@ -12,6 +12,7 @@ pub struct MainForm {
     pub fr_6i34: Vec<String>,
     #[max_len(255)]
     pub fr_8xjs: String,
+    #[max_len(200)]
     pub fr_9c3f: String,
     pub fr_4ok6: u128,
     #[max_len(255)]
