@@ -13,7 +13,7 @@ declare_id!("9dTbbtqwNo2KcECHDPX16sYNQNQ5dduEwFnGPG29mmDH");
 pub mod solana_forms_demo {
     use super::*;
 
-    pub fn create(
+    pub fn initialize(
         ctx: Context<Create>,
         fr_5pqi: u128,
         fr_duif: Vec<String>,
