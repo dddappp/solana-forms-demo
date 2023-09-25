@@ -33,7 +33,7 @@ describe("hello", () => {
     );
 
     // Add your test here.
-    const tx = await program.methods.initialize(
+    const tx = await program.methods.create(
         new anchor.BN(1_234),
         ["hello", "world"],
         ["foo", "bar"],
