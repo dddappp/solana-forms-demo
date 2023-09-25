@@ -14,7 +14,7 @@ describe("hello", () => {
   const program = anchor.workspace.SolanaFormsDemo as Program<SolanaFormsDemo>;
 
 
-  it("Is initialized!", async () => {
+  it("Is created!", async () => {
 
     // ----------------------------------------------------------
     // Human's wallet
@@ -35,8 +35,9 @@ describe("hello", () => {
     // Add your test here.
     const tx = await program.methods.create(
         new anchor.BN(1_234),
-        //"hello",
-        //["foo", "bar"]
+        ["hello", "world"],
+        ["foo", "bar"],
+        "hello",
     ).accounts(
         {
            mainForm,

@@ -1,0 +1,205 @@
+﻿aggregates:
+  MainForm:
+    name: MainForm
+    id:
+      generator:
+        class: signer
+      conceptual: true
+      name: SignerAddress
+      type: address
+      sequenceNumber: -1
+    properties:
+      Fr_5pqi:
+        name: Fr_5pqi
+        optional: false
+        type: u128
+      Fr_duif:
+        name: Fr_duif
+        displayName: 下拉多选
+        optional: false
+        itemType: Fr_duif
+        sequenceNumber: 1
+      Fr_6i34:
+        name: Fr_6i34
+        displayName: 点击多选
+        optional: false
+        itemType: Fr_6i34
+        sequenceNumber: 2
+      Fr_8xjs:
+        name: Fr_8xjs
+        optional: false
+        length: 255
+        type: String
+        sequenceNumber: 3
+#      Fr_9c3f:
+#        name: Fr_9c3f
+#        displayName: 下拉单选
+#        optional: false
+#        type: Fr_9c3f
+#        sequenceNumber: 4
+#      Fr_4ok6:
+#        name: Fr_4ok6
+#        optional: false
+#        scale: 2
+#        type: u128
+#        sequenceNumber: 5
+#      Fr_b3ub:
+#        name: Fr_b3ub
+#        optional: false
+#        length: 255
+#        type: String
+#        sequenceNumber: 6
+#      Fr_1z7o:
+#        name: Fr_1z7o
+#        optional: false
+#        min: 1
+#        max: 10
+#        type: u128
+#        sequenceNumber: 7
+#      Fr_d8rw:
+#        name: Fr_d8rw
+#        optional: false
+#        type: StringRange
+#        sequenceNumber: 8
+#      Fr_dy3l:
+#        name: Fr_dy3l
+#        optional: false
+#        type: StringRange
+#        sequenceNumber: 9
+#      Fr_6f68:
+#        name: Fr_6f68
+#        optional: false
+#        type: u128
+#        sequenceNumber: 10
+#      Fr_47yy:
+#        name: Fr_47yy
+#        optional: false
+#        type: StringRange
+#        sequenceNumber: 11
+#      Fr_gh3o:
+#        name: Fr_gh3o
+#        displayName: 下拉多选
+#        optional: false
+#        itemType: Fr_gh3o
+#        sequenceNumber: 12
+#      Fr_fbba:
+#        name: Fr_fbba
+#        displayName: 点击多选
+#        optional: false
+#        itemType: Fr_fbba
+#        sequenceNumber: 13
+#      Fr_hhzp:
+#        name: Fr_hhzp
+#        optional: false
+#        length: 255
+#        type: String
+#        sequenceNumber: 14
+#      Single_text1:
+#        name: Single_text1
+#        optional: false
+#        length: 50
+#        type: String
+#        sequenceNumber: 15
+    metadata:
+      Preprocessors:
+      - MOVE_CRUD_IT
+      CRUD_IT_NO_UPDATE: true
+      CRUD_IT_NO_DELETE: true
+enumObjects:
+  Fr_duif:
+    baseType: String
+    values:
+      A:
+        name: A
+        displayName: A
+        value: A
+        stringValue: A
+      B:
+        name: B
+        displayName: B
+        value: B
+        stringValue: B
+    name: Fr_duif
+    displayName: 下拉多选
+  Fr_6i34:
+    baseType: String
+    values:
+      A:
+        name: A
+        displayName: A
+        value: A
+        stringValue: A
+      B:
+        name: B
+        displayName: B
+        value: B
+        stringValue: B
+      C:
+        name: C
+        displayName: C
+        value: C
+        stringValue: C
+    name: Fr_6i34
+    displayName: 点击多选
+  Fr_9c3f:
+    baseType: String
+    values:
+      Option_1:
+        name: Option_1
+        displayName: A
+        value: 1
+        intValue: 1
+        stringValue: 1
+      Option_2:
+        name: Option_2
+        displayName: B
+        value: 2
+        intValue: 2
+        stringValue: 2
+      Option_3:
+        name: Option_3
+        displayName: C
+        value: 3
+        intValue: 3
+        stringValue: 3
+    name: Fr_9c3f
+    displayName: 下拉单选
+  Fr_gh3o:
+    baseType: String
+    values:
+      A:
+        name: A
+        displayName: A
+        value: A
+        stringValue: A
+      B:
+        name: B
+        displayName: B
+        value: B
+        stringValue: B
+    name: Fr_gh3o
+    displayName: 下拉多选
+  Fr_fbba:
+    baseType: String
+    values:
+      Option_1:
+        name: Option_1
+        displayName: A
+        value: 1
+        intValue: 1
+        stringValue: 1
+      Option_2:
+        name: Option_2
+        displayName: B
+        value: 2
+        intValue: 2
+        stringValue: 2
+      Option_3:
+        name: Option_3
+        displayName: C
+        value: 3
+        intValue: 3
+        stringValue: 3
+    name: Fr_fbba
+    displayName: 点击多选
+

@@ -1,0 +1,14 @@
+typeDefinitions:
+  StringRange:
+    moveType: "Vec<String>" #"xrender_form_utils::string_range::StringRange"
+    #moveEntryFunType: "Vec<String>"
+    #moveEntryFunTypeDeserializeFun: "xrender_form_utils::string_range::value_of"
+#    dataStruct:
+#      properties:
+#        Start:
+#          type: String
+#          length: 50
+#        End:
+#          type: String
+#          length: 50
+
