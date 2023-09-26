@@ -7,7 +7,7 @@ use crate::context::*;
 use crate::state::*;
 use crate::event::*;
 
-declare_id!("9dTbbtqwNo2KcECHDPX16sYNQNQ5dduEwFnGPG29mmDH");
+declare_id!("DJYREhvzFLcicT1aaqgsSigLkj8v3vwiiWKaPyPFTcos");
 
 #[program]
 pub mod solana_forms_demo {

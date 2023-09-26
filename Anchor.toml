@@ -3,12 +3,16 @@ seeds = false
 skip-lint = false
 [programs.localnet]
 solana_forms_demo = "9dTbbtqwNo2KcECHDPX16sYNQNQ5dduEwFnGPG29mmDH"
+[programs.devnet]
+solana_forms_demo = "DJYREhvzFLcicT1aaqgsSigLkj8v3vwiiWKaPyPFTcos"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
+#cluster = "Localnet"
+#wallet = "/Users/yangjiefeng/.config/solana/id.json"
+cluster = "devnet"
 wallet = "/Users/yangjiefeng/.config/solana/id.json"
 
 [scripts]
