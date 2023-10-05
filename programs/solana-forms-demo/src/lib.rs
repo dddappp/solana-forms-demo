@@ -34,8 +34,9 @@ pub mod solana_forms_demo {
         arg_15: String,
         arg_16: String,
     ) -> Result<()> {
+        let signer_address = *ctx.accounts.authority.key;
         let main_form_created = main_form_create_logic::verify(
-            *ctx.accounts.authority.key,
+            signer_address,
             arg_1,
             arg_2,
             arg_3,
@@ -52,10 +53,15 @@ pub mod solana_forms_demo {
             arg_14,
             arg_15,
             arg_16,
+            &ctx,
         );
-        *ctx.accounts.main_form = main_form_create_logic::mutate(
+        assert_eq!(signer_address, main_form_created.signer_address, "SignerAddress of event does not match");
+        let main_form = main_form_create_logic::mutate(
             &main_form_created,
         );
+        assert_eq!(signer_address, main_form.signer_address, "SignerAddress of state does not match");
+        assert_eq!(0, main_form.version, "Version of state does not match");
+        *ctx.accounts.main_form = main_form;
         emit!(main_form_created);
 
         Ok(())

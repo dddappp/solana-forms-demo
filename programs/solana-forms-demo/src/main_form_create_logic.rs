@@ -2,6 +2,7 @@ use anchor_lang::prelude::*;
 
 use crate::event::MainFormCreated;
 use crate::state::MainForm;
+use crate::context::Create;
 
 pub(crate) fn verify(
     signer_address: Pubkey,
@@ -21,7 +22,9 @@ pub(crate) fn verify(
     fr_fbba: Vec<String>,
     fr_hhzp: String,
     single_text1: String,
+    ctx: &Context<Create>,
 ) -> MainFormCreated {
+    let _ = ctx;
     MainFormCreated {
         signer_address,
         fr_5pqi,
