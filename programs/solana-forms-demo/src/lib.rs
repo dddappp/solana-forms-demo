@@ -107,18 +107,18 @@ pub mod solana_forms_demo {
             arg_14,
             arg_15,
             arg_16,
-            &main_form,
+            main_form,
             &ctx,
         );
         assert_eq!(signer_address, main_form_updated.signer_address, "SignerAddress of event does not match");
         assert_eq!(old_version, main_form_updated.version, "Version of event does not match");
-        let mut updated_main_form = main_form_update_logic::mutate(
+        let main_form = &mut ctx.accounts.main_form;
+        main_form_update_logic::mutate(
             &main_form_updated,
             main_form,
         );
-        assert_eq!(signer_address, updated_main_form.signer_address, "SignerAddress of state does not match");
-        updated_main_form.version = old_version + 1;
-        *ctx.accounts.main_form = updated_main_form;
+        assert_eq!(signer_address, main_form.signer_address, "SignerAddress of state does not match");
+        main_form.version = old_version + 1;
         emit!(main_form_updated);
 
         Ok(())
