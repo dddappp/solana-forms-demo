@@ -116,7 +116,7 @@
     metadata:
       Preprocessors:
       - MOVE_CRUD_IT
-      CRUD_IT_NO_UPDATE: true
+      #CRUD_IT_NO_UPDATE: true
       CRUD_IT_NO_DELETE: true
 enumObjects:
   Fr_duif:

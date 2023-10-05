@@ -21,3 +21,21 @@ pub struct Create<'info> {
     pub system_program: Program<'info, System>,
 }
 
+#[derive(Accounts)]
+pub struct Update<'info> {
+    #[account(
+        mut,
+        seeds = [
+            b"MainForm",
+            main_form.signer_address.as_ref(),
+        ],
+        bump
+    )]
+    pub main_form: Account<'info, MainForm>,
+
+    #[account(mut)]
+    pub authority: Signer<'info>,
+
+    pub system_program: Program<'info, System>,
+}
+
