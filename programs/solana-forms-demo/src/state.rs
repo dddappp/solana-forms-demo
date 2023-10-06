@@ -34,3 +34,4 @@ pub struct MainForm {
     #[max_len(50)]
     pub single_text1: String,
 }
+
