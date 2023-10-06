@@ -36,7 +36,7 @@ describe("hello", () => {
     const tx = await program.methods.create(
         new anchor.BN(1_234),
         ["A", "B"],
-        ["B", "B"],
+        ["A", "B"],
         "hello",
         "1",
         new anchor.BN(2),
@@ -68,7 +68,7 @@ describe("hello", () => {
     const tx_2 = await program.methods.update(
         new anchor.BN(1_234),
         ["B"],
-        ["B", "B"],
+        ["A", "B"],
         "hello",
         "1",
         new anchor.BN(2),
