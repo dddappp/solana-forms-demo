@@ -26,7 +26,7 @@ pub(crate) fn verify(
 ) -> MainFormUpdated {
     let _ = ctx;
     MainFormUpdated {
-        signer_address: main_form.signer_address,
+        signer_address: main_form.signer_address.clone(),
         version: main_form.version,
         fr_5pqi,
         fr_duif,
