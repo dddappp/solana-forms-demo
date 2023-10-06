@@ -9,10 +9,9 @@ describe("hello", () => {
   // Configure the client to use the local cluster.
   anchor.setProvider(provider);
 
-  const authority = provider.wallet.publicKey;
-
   const program = anchor.workspace.SolanaFormsDemo as Program<SolanaFormsDemo>;
 
+  const authority = provider.wallet.publicKey;
 
   it("Is created!", async () => {
 

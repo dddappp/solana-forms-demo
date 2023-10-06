@@ -4,8 +4,6 @@ pub mod state;
 pub mod event;
 
 use crate::context::*;
-//use crate::state::*;
-//use crate::event::*;
 
 mod main_form_create_logic;
 mod main_form_update_logic;
@@ -37,7 +35,7 @@ pub mod solana_forms_demo {
     ) -> Result<()> {
         let signer_address = *ctx.accounts.authority.key;
         let main_form_created = main_form_create_logic::verify(
-            signer_address,
+            signer_address.clone(),
             arg_1,
             arg_2,
             arg_3,
@@ -88,7 +86,7 @@ pub mod solana_forms_demo {
         arg_16: String,
     ) -> Result<()> {
         let main_form = &ctx.accounts.main_form;
-        let signer_address = main_form.signer_address;
+        let signer_address = main_form.signer_address.clone();
         let old_version = main_form.version;
         let main_form_updated = main_form_update_logic::verify(
             arg_1,
