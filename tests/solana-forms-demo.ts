@@ -53,8 +53,7 @@ describe("hello", () => {
     ).accounts(
         {
            mainForm,
-           //authority,
-           authority: human.publicKey,
+           authority: human.publicKey, //authority,
            systemProgram: anchor.web3.SystemProgram.programId,
         }
     )
@@ -63,6 +62,39 @@ describe("hello", () => {
     )
     .rpc();
     console.log("Your transaction signature", tx);
+
+    //
+    // update
+    const tx_2 = await program.methods.update(
+        new anchor.BN(1_234),
+        ["B"],
+        ["B", "B"],
+        "hello",
+        "1",
+        new anchor.BN(2),
+        "",
+        new anchor.BN(3),
+        ["2023-10-10", "2023-10-11"],
+        ["2023-10-10", "2023-10-11"],
+        new anchor.BN(8),
+        ["10:10:00", "10:11:00"],
+        ["A"],
+        ["1", "3"],
+        "2023-10-10",
+        "z@test.org"
+    ).accounts(
+        {
+           mainForm,
+           authority: human.publicKey, //authority,
+           systemProgram: anchor.web3.SystemProgram.programId,
+        }
+    )
+    .signers(
+        [human]
+    )
+    .rpc();
+    console.log("Your transaction signature", tx_2);
+    //
 
     // Fetch the state struct from the network.
     const accountState = await program.account.mainForm.fetch(mainForm);
