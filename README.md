@@ -1,8 +1,12 @@
 # READ ME
 
-This article describes how to develop a Solana form programa.
+This article describes how to develop a Solana form program (i.e., smart contract).
 
-Use Anchor init a workspace:
+This project is inspired by [Move Forms](https://github.com/dddappp/aptos-forms-demo).
+
+## Init
+
+Use Anchor CLI to init a workspace:
 
 ```shell
 anchor init solana-forms-demo
@@ -10,6 +14,13 @@ cd solana-forms-demo
 ```
 
 ## ~~Programming~~
+
+The form tool is actually a No-Code application, so we don't actually need to program here. But for now we do need to install some CLI tools.
+
+So before getting started, you need to:
+
+* Install [Rust & Anchor & Solana & Yarn](https://www.anchor-lang.com).
+* Install [Docker](https://docs.docker.com/engine/install/).
 
 ### How to design a form and get its schema
 
@@ -68,6 +79,8 @@ Currently the tool only generates on-chain contracts, so Java-related parameters
 
 ## Test Example
 
+Now you can test it like a regular Anchor Solana program. You realize that you didn't even write a single line of code😄.
+
 Run local single-node dev cluster:
 
 ```shell
@@ -80,7 +93,7 @@ Build & deploy program:
 anchor build && anchor deploy
 ```
 
-Stream transaction logs:
+Stream transaction logs in another terminal:
 
 ```shell
 solana logs --url localhost
@@ -91,7 +104,6 @@ Run TypeScript test:
 ```shell
 anchor run test
 ```
-
 
 ## Tips
 
