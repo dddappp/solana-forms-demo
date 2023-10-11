@@ -15,7 +15,7 @@ cd solana-forms-demo
 
 ## ~~Programming~~
 
-The form tool is actually a No-Code application, so we don't actually need to program here. But for now we do need to install some CLI tools.
+We will use the visual form designer to "design" the form program, so we don't actually need to program here. But for now we do need to install some CLI tools.
 
 So before getting started, you need to:
 
@@ -102,6 +102,7 @@ solana logs --url localhost
 Run TypeScript test:
 
 ```shell
+# Of course, this still requires you to modify the TS test file like this repo first
 anchor run test
 ```
 
